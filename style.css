@@ -8,6 +8,7 @@
 
 body {
   font-family: 'Outfit', sans-serif;
+  background: #f0eef1;
 }
 
 :root {
@@ -18,17 +19,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px 150px;
   background-color: var(--white);
   font-size: 18px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .btn {
   padding: 10px 15px;
   border-radius: 8px;
   font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
   background: #ffffff;
   color: #1a202c;
