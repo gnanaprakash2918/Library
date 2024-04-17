@@ -34,3 +34,17 @@ body {
   color: #1a202c;
   font-family: 'Outfit', sans-serif;
 }
+
+.btn-add {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.15s ease-in-out;
+}
+
+.btn-add:hover {
+  filter: brightness(90%);
+}
