@@ -72,6 +72,11 @@ main {
 
 .add-book-form button {
   width: 100%;
+  padding: 8px 0;
+  border-radius: 4px;
+  border: 1px solid black;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 input {
