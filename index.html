@@ -25,6 +25,42 @@
         <button class="btn-add">+ Add Book</button>
         <div class="books-grid"></div>
       </main>
+
+      <div class="modal">
+        <form class="add-book-form">
+          <h3>Add New Book</h3>
+          <input
+            type="text"
+            class="text"
+            placeholder="Book Title"
+            required
+            maxlength="100"
+          />
+
+          <input
+            type="text"
+            class="text"
+            placeholder="Author name"
+            required
+            maxlength="100"
+          />
+
+          <input
+            type="text"
+            class="text"
+            placeholder="Pages"
+            required
+            max="10000"
+          />
+
+          <div class="is-read">
+            <label for="is-read">Have you read it?</label>
+            <input type="checkbox" class="checkbox" />
+          </div>
+
+          <button class="btn-submit" type="submit">Submit</button>
+        </form>
+      </div>
     </header>
   </body>
 </html>
