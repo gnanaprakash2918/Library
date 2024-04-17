@@ -48,3 +48,44 @@ body {
 .btn-add:hover {
   filter: brightness(90%);
 }
+
+main {
+  margin-top: 30px;
+  padding: 20px 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+}
+
+.add-book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 300px;
+  align-items: center;
+  padding: 20px;
+}
+
+.add-book-form button {
+  width: 100%;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.is-read {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.label-read {
+  width: 100%;
+}
