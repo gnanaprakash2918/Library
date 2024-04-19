@@ -23,6 +23,7 @@ function Book(bookTitle, authorName, noOfPages, hasRead) {
 }
 
 function addBookToLibrary(book) {
+  myLibrary.push(book);
   const bookGrid = document.querySelector('.books-grid');
 
   const bookCard = document.createElement('div');
@@ -64,7 +65,9 @@ function addBookToLibrary(book) {
 
   const removeBtn = document.createElement('button');
   removeBtn.textContent = 'Remove';
-  removeBtn.addEventListener('click', () => bookCard.remove());
+  removeBtn.addEventListener('click', function () {
+    bookCard.remove();
+  });
 
   bookGrid.appendChild(bookCard);
   bookCard.appendChild(title);
