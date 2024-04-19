@@ -59,7 +59,14 @@ main {
 .modal {
   display: flex;
   justify-content: center;
+  align-items: center;
   visibility: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal.active {
@@ -73,6 +80,8 @@ main {
   width: 300px;
   align-items: center;
   padding: 20px;
+  background-color: #fefefe;
+  border-radius: 8px;
 }
 
 .add-book-form button {

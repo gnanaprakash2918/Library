@@ -7,7 +7,13 @@ addBookBtn.addEventListener(
   () => (modalElement.style.visibility = 'visible')
 );
 
-submitBtn.addEventListener(
-  'click',
-  () => (modalElement.style.visibility = 'hidden')
-);
+submitBtn.addEventListener('click', function () {
+  if (document.querySelector('input:nth-child(2)').textContent.length == 0)
+    return;
+  if (document.querySelector('input:nth-child(3)').textContent.length == 0)
+    return;
+  if (document.querySelector('input:nth-child(4)').textContent.length == 0)
+    return;
+
+  modalElement.style.visibility = 'hidden';
+});
