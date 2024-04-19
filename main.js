@@ -23,9 +23,27 @@ function Book(bookTitle, authorName, noOfPages, hasRead) {
 }
 
 function addBookToLibrary(book) {
-  console.log(book.bookTitle);
-  console.log(book.authorName);
-  console.log(book.noOfPages);
+  const bookGrid = document.querySelector('.books-grid');
+
+  const bookCard = document.createElement('div');
+  const title = document.createElement('p');
+  const author = document.createElement('p');
+  const pages = document.createElement('p');
+  const buttonGrp = document.createElement('div');
+  const readBtn = document.createElement('button');
+  const removeBtn = document.createElement('button');
+
+  readBtn.textContent = `${book.hasRead ? 'Read' : 'Not Read'}`;
+
+  bookGrid.appendChild(bookCard);
+  bookCard.appendChild(title);
+  bookCard.appendChild(author);
+  bookCard.appendChild(pages);
+
+  buttonGrp.appendChild(readBtn);
+  buttonGrp.appendChild(removeBtn);
+  bookCard.appendChild(buttonGrp);
+
   console.log(book.hasRead);
 }
 
@@ -50,4 +68,6 @@ submitBtn.addEventListener('click', function (event) {
   );
 
   addBookToLibrary(book);
+  bookTitle.value = authorName.value = noOfPages.value = '';
+  hasRead.checked = false;
 });

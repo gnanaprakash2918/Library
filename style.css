@@ -115,3 +115,7 @@ input {
 .checkbox {
   width: 20%;
 }
+
+.books-grid {
+  display: grid;
+}
