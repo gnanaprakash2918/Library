@@ -158,3 +158,12 @@ input {
   font-weight: 600;
   cursor: pointer;
 }
+
+.remove-btn:hover {
+  cursor: pointer;
+  background-color: rgb(255, 156, 156);
+}
+
+.read-btn:hover {
+  cursor: pointer;
+}

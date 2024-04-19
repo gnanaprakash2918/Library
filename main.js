@@ -42,6 +42,7 @@ function addBookToLibrary(book) {
 
   const readBtn = document.createElement('button');
   readBtn.textContent = `${book.hasRead ? 'Read' : 'Not Read'}`;
+  readBtn.classList.add('read-btn');
 
   if (book.hasRead) {
     readBtn.style.backgroundColor = 'rgb(159, 255, 156)';
@@ -49,8 +50,21 @@ function addBookToLibrary(book) {
     readBtn.style.backgroundColor = 'rgb(255, 156, 156)';
   }
 
+  readBtn.addEventListener('click', function () {
+    if (readBtn.classList.value == 'read-btn') {
+      readBtn.classList.value = 'remove-btn';
+      readBtn.textContent = 'Read';
+      readBtn.style.backgroundColor = 'rgb(159, 255, 156)';
+    } else {
+      readBtn.classList.value = 'read-btn';
+      readBtn.textContent = 'Not Read';
+      readBtn.style.backgroundColor = 'rgb(255, 156, 156)';
+    }
+  });
+
   const removeBtn = document.createElement('button');
   removeBtn.textContent = 'Remove';
+  removeBtn.classList.add('remove-btn');
 
   bookGrid.appendChild(bookCard);
   bookCard.appendChild(title);
