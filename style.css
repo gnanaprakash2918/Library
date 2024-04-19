@@ -4,10 +4,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
 }
 
 body {
-  font-family: 'Outfit', sans-serif;
   background: #f0eef1;
 }
 
@@ -59,6 +59,11 @@ main {
 .modal {
   display: flex;
   justify-content: center;
+  visibility: hidden;
+}
+
+.modal.active {
+  visibility: visible;
 }
 
 .add-book-form {
@@ -77,6 +82,7 @@ main {
   border: 1px solid black;
   font-weight: bold;
   font-size: 14px;
+  cursor: pointer;
 }
 
 input {
@@ -89,8 +95,14 @@ input {
   display: flex;
   align-items: center;
   width: 100%;
+  justify-content: center;
+  font-size: 20px;
 }
 
 .label-read {
-  width: 100%;
+  width: 80%;
+}
+
+.checkbox {
+  width: 20%;
 }
