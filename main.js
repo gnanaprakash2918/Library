@@ -16,6 +16,10 @@ function Book(bookTitle, authorName, noOfPages, hasRead) {
   this.authorName = authorName;
   this.noOfPages = noOfPages;
   this.hasRead = hasRead;
+
+  this.info = function () {
+    return `${this.bookTitle} by ${this.authorName}, ${this.noOfPages} pages`;
+  };
 }
 
 function addBookToLibrary(book) {
@@ -28,16 +32,22 @@ function addBookToLibrary(book) {
 submitBtn.addEventListener('click', function (event) {
   event.preventDefault();
 
-  const bookTitle = document.querySelector('input:nth-child(2)').value;
-  const authorName = document.querySelector('input:nth-child(3)').value;
-  const noOfPages = document.querySelector('input:nth-child(4)').value;
+  const bookTitle = document.querySelector('input:nth-child(2)');
+  const authorName = document.querySelector('input:nth-child(3)');
+  const noOfPages = document.querySelector('input:nth-child(4)');
   const hasRead = document.querySelector('.is-read > input');
 
-  if (bookTitle.length == 0) return;
-  if (authorName.length == 0) return;
-  if (noOfPages.length == 0) return;
+  if (bookTitle.value.length == 0) return;
+  if (authorName.value.length == 0) return;
+  if (noOfPages.value.length == 0) return;
 
   modalElement.style.visibility = 'hidden';
-  const book = new Book(bookTitle, authorName, noOfPages, hasRead.checked);
+  const book = new Book(
+    bookTitle.value,
+    authorName.value,
+    noOfPages.value,
+    hasRead.checked
+  );
+
   addBookToLibrary(book);
 });
