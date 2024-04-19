@@ -120,4 +120,41 @@ input {
 
 .books-grid {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fefefe;
+  border-radius: 8px;
+  padding: 8px;
+  gap: 20px;
+}
+
+.book-card p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.book-card > * {
+  padding: 10px 10px;
+}
+
+.buttonGrp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.buttonGrp > * {
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
 }

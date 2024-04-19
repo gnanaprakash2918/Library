@@ -26,6 +26,8 @@ function addBookToLibrary(book) {
   const bookGrid = document.querySelector('.books-grid');
 
   const bookCard = document.createElement('div');
+  bookCard.classList.add('book-card');
+
   const title = document.createElement('p');
   title.textContent = book.bookTitle;
 
@@ -36,8 +38,16 @@ function addBookToLibrary(book) {
   pages.textContent = book.noOfPages;
 
   const buttonGrp = document.createElement('div');
+  buttonGrp.classList.add('buttonGrp');
+
   const readBtn = document.createElement('button');
   readBtn.textContent = `${book.hasRead ? 'Read' : 'Not Read'}`;
+
+  if (book.hasRead) {
+    readBtn.style.backgroundColor = 'rgb(159, 255, 156)';
+  } else {
+    readBtn.style.backgroundColor = 'rgb(255, 156, 156)';
+  }
 
   const removeBtn = document.createElement('button');
   removeBtn.textContent = 'Remove';
@@ -50,8 +60,6 @@ function addBookToLibrary(book) {
   buttonGrp.appendChild(readBtn);
   buttonGrp.appendChild(removeBtn);
   bookCard.appendChild(buttonGrp);
-
-  console.log(book.hasRead);
 }
 
 submitBtn.addEventListener('click', function (event) {
