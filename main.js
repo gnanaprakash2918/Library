@@ -27,13 +27,20 @@ function addBookToLibrary(book) {
 
   const bookCard = document.createElement('div');
   const title = document.createElement('p');
+  title.textContent = book.bookTitle;
+
   const author = document.createElement('p');
+  author.textContent = book.authorName;
+
   const pages = document.createElement('p');
+  pages.textContent = book.noOfPages;
+
   const buttonGrp = document.createElement('div');
   const readBtn = document.createElement('button');
-  const removeBtn = document.createElement('button');
-
   readBtn.textContent = `${book.hasRead ? 'Read' : 'Not Read'}`;
+
+  const removeBtn = document.createElement('button');
+  removeBtn.textContent = 'Remove';
 
   bookGrid.appendChild(bookCard);
   bookCard.appendChild(title);
