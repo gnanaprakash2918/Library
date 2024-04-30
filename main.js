@@ -11,15 +11,17 @@ addBookBtn.addEventListener(
 
 const myLibrary = [];
 
-function Book(bookTitle, authorName, noOfPages, hasRead) {
-  this.bookTitle = bookTitle;
-  this.authorName = authorName;
-  this.noOfPages = noOfPages;
-  this.hasRead = hasRead;
+class Book {
+  constructor(bookTitle, authorName, noOfPages, hasRead) {
+    this.bookTitle = bookTitle;
+    this.authorName = authorName;
+    this.noOfPages = noOfPages;
+    this.hasRead = hasRead;
+  }
 
-  this.info = function () {
+  info() {
     return `${this.bookTitle} by ${this.authorName}, ${this.noOfPages} pages`;
-  };
+  }
 }
 
 function addBookToLibrary(book) {
